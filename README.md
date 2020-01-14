@@ -27,7 +27,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+|nickname|string|null: false|index: true|
 |email|string|null: false|
 |password|string|null: false|
 
@@ -44,8 +44,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|references :user|integer|null: false, foreign_key: true|
-|references :group|integer|null: false, foreign_key: true|
+|user|references|integer|null: false, foreign_key: true|
+|group|references|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -79,8 +79,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|
 |image|string|
-|references: group|integer|null: false, foreign_key: true|
-|references :user|integer|null: false, foreign_key: true|
+|group|references|integer|null: false, foreign_key: true|
+|user|references|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
