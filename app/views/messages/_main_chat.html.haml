@@ -1,0 +1,30 @@
+.chat-main
+  .chat-main__group-info
+    .info-name
+      LGTM!
+      .info-name__member
+        Member: LGTM
+    .info-edit
+      = link_to "#", class: "info-edit__btn" do
+        Edit
+  .chat-main__message-list
+    .list-name
+      LGTM!!
+      .list-name__time
+        2020/01/16(thu) 12:00:00
+    .list-message
+      come on LGTM!
+    .list-name
+      LGTM!!
+      .list-name__time
+        2020/01/16(thu) 12:00:00
+    .list-message
+      come on LGTM!
+  .chat-main__message-form
+    %form.master-form
+      .master-form__text-form
+        %input{type: "text",class: "text-input", placeholder:"type a message"}/
+      .master-form__icons
+        = icon('fas','image',class: 'master-form__icon')
+    .send-form
+      %input{type: "submit", class: "send-form",value: "Send"}/
