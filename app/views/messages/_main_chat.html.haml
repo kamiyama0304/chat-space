@@ -22,11 +22,13 @@
       come on LGTM!
   .chat-main__message-form
     = form_for [@group, @message] do |f|
-      .master-form__text-form
-       = f.text_field :content, class: 'text-input', placeholder: 'type a message'
-      .master-form__icons
-        = f.label :image, class: 'master-form__image' do
-          = icon('fas','image',class: 'master-form__icon')
-          = f.file_field :image, class: 'hidden'
-    .send-form
-       = f.submit 'Send', class: 'send-form'
+      .message-form
+        .master-form
+          .master-form__text-form
+            = f.text_field :content, class: 'text-input', placeholder: 'type a message'
+          .master-form__icons
+            = f.label :image, class: 'master-form__image' do
+              = icon('fas','image',class: 'master-form__icon')
+              = f.file_field :image, class: 'hidden'
+        .send-form
+          = f.submit 'Send', class: 'send-form'

@@ -56,8 +56,10 @@
   &__message-form{
     background-color: #d2d2d2;
     height: 90px;
-    display: flex;
     padding: 20px 40px;
+    .message-form{
+      display: flex;
+    }
     .master-form{
       width: 100%;
       display: flex;
@@ -77,6 +79,9 @@
         right: 10px;
         font-size: 20px;
       }
+    }
+    .hidden{
+      display: none;
     }
     .send-form{
       width: 100px;
