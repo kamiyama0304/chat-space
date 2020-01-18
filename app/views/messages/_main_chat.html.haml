@@ -7,19 +7,9 @@
     .info-edit
       = link_to "#", class: "info-edit__btn" do
         Edit
-  .chat-main__message-list
-    .list-name
-      LGTM!!
-      .list-name__time
-        2020/01/16(thu) 12:00:00
-    .list-message
-      come on LGTM!
-    .list-name
-      LGTM!!
-      .list-name__time
-        2020/01/16(thu) 12:00:00
-    .list-message
-      come on LGTM!
+  .messages
+    = render @messages
+  
   .chat-main__message-form
     = form_for [@group, @message] do |f|
       .message-form
