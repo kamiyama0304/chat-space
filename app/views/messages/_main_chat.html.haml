@@ -1,30 +1,28 @@
 .chat-main
   .chat-main__group-info
     .info-name
-      LGTM!
+      = @group.name
       .info-name__member
-        Member: LGTM
+        Member:
+        - @group.users.each do |user|
+          = user.name
+        
+
     .info-edit
-      = link_to "#", class: "info-edit__btn" do
+      = link_to edit_group_path(@group), class: "info-edit__btn" do
         Edit
-  .chat-main__message-list
-    .list-name
-      LGTM!!
-      .list-name__time
-        2020/01/16(thu) 12:00:00
-    .list-message
-      come on LGTM!
-    .list-name
-      LGTM!!
-      .list-name__time
-        2020/01/16(thu) 12:00:00
-    .list-message
-      come on LGTM!
+  .messages
+    = render @messages
+       
   .chat-main__message-form
-    %form.master-form
-      .master-form__text-form
-        %input{type: "text",class: "text-input", placeholder:"type a message"}/
-      .master-form__icons
-        = icon('fas','image',class: 'master-form__icon')
-    .send-form
-      %input{type: "submit", class: "send-form",value: "Send"}/
+    = form_for [@group, @message] do |f|
+      .message-form
+        .master-form
+          .master-form__text-form
+            = f.text_field :content, class: 'text-input', placeholder: 'type a message'
+          .master-form__icons
+            = f.label :image, class: 'master-form__image' do
+              = icon('fas','image',class: 'master-form__icon')
+              = f.file_field :image, class: 'hidden'
+        .send-form
+          = f.submit 'Send', class: 'send-form'
