@@ -26,7 +26,7 @@ $(function(){
                 ${message.created_at}
                 </div>
               </div>
-            </div>
+            
             <div class="list-message">
               <p class="list-message__content">
                 ${message.content}
