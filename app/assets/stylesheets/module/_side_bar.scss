@@ -5,14 +5,14 @@
   font-weight: bold;
   &__user-name {
     height: 100px;
-    background-color: #2f3e51;
+    background-color: #253141;
     justify-content: center;
     display: flex;
     align-items: center;
     .top-items{
       width: 260px;
       height: 20px;
-      background-color: #2f3e51;
+      background-color: #253141;
       line-height: 100px;
       display: flex;
       justify-content: space-between;
@@ -41,7 +41,7 @@
       &__name{
         font-size: 15px;
         padding-bottom: 5px;
-        margin-top: 20px;
+        padding-top: 20px;
         color: #ffffff;
       }
       &__message{
