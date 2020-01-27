@@ -2,8 +2,7 @@
   .side-bar__user-name
     .top-items
       .top-items__name
-        //LGTM
-        = @group.name
+        //= @group.name
         = current_user.name
       .top-items__icons
         = link_to new_group_path, class: "top-items__btn" do
